@@ -1,0 +1,8 @@
+//这里是公共样式全局变量，在vue.config.js里已经全局引用
+//单页面使用，如background:@bgColor就编译成了：background:yellow
+//一般把公共的样式变量等统一在这里
+@import './common_box.less';
+@bgColor:blue;
+.homeA{
+    .child()//使用common_box.less文件里变量的方法
+}
