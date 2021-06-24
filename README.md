@@ -1,25 +1,14 @@
 # binfen_postgraduate
 
-## Project setup
+## 需求
+帮助使用者方便的记忆考研判断题选择题  
+主要使用手机端访问页面
 
-    npm install
-
-### Compiles and hot-reloads for development
+### 启动项目
 
     npm run serve
 
-### Compiles and minifies for production
+### 打包
 
     npm run build
 
-### Run your tests
-
-    npm run test
-
-### Lints and fixes files
-
-    npm run lint
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
