@@ -1,27 +1,20 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <div class="homeA">
-      <div class="ll"><span class="ll_testless">1111111</span>你不好</div>
-    </div>
-    <div class="child">你好</div>
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div>
+    <common-header :type="type" :title="title"></common-header>
+    <grid-card></grid-card>
   </div>
 </template>
-
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-// import "../assets/style/common_box.less";
+import CommonHeader from "../components/CommonHeader.vue";
+import GridCard from "../components/GridCard.vue";
 export default {
+  components: { GridCard, CommonHeader },
   name: "Home",
-  components: {
-    HelloWorld,
+  data() {
+    return {
+      type: "0",
+      title: "首页",
+    };
   },
 };
 </script>
-<style lang="less" scoped>
-.ll {
-  background: @bgColor;
-}
-</style>

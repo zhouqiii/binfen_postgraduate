@@ -1,7 +1,84 @@
 //这里是样式页面，在mian.js，那么页面class与这个样式类名一致就可以使用样式
-.child{
-    font-size: 100px;
+/*
+* @description app common style 
+*
+*/
+@charset "utf-8";
+/*************************** common style start   *******************************************/
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
-.test{
-    font-size: 100px;
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  background-color: #f7f7f7;
+  color: #333333;
+  font-family: PingFang-SC-Heavy, PingFangSC-Regular, PingFang SC;
+  -moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: none;
+	-webkit-overflow-scrolling: touch;
+  -webkit-font-smoothing: antialiased;
 }
+
+::-webkit-scrollbar {
+  width: 0;
+  background-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: inherit;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+/*************************** common style end   *******************************************/
+/**复用的基本样式**/
+.flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex_between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap:wrap
+}
+
+.flex_around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flex_start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flex_end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+/**复用的基本样式结束**/
+/*页面布局复用的基本样式*/
+.home{
+  padding: 0 @32pad;
+}
+/*页面布局复用的基本样式结束*/
