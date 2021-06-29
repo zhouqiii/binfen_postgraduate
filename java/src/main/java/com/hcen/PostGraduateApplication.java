@@ -26,7 +26,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.TimeZone;
 
-//@MapperScan("com.gistone.policytool.*.mapper")
+@MapperScan("com.hcen.service.*")
 @SpringBootApplication
 public class PostGraduateApplication extends SpringBootServletInitializer {
 
