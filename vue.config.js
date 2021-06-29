@@ -16,6 +16,7 @@ module.exports = {
     });
   },
   devServer: {
+    port: 8530,
     proxy: {
       "/": {
         target: "https://www.alex188.cn/AppPrj4",
