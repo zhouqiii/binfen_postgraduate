@@ -1,5 +1,5 @@
 import axios from "axios";
-
+//import qs from "qs";
 //创建axios实例
 const instance = axios.create({
   baseURL: process.env.NODE_ENV === "development" ? "" : "http://baidu.com",
@@ -41,7 +41,7 @@ instance.interceptors.response.use(
 const request = ({ url = "", data = {}, params = {}, method = "post" } = {}) =>
   instance({
     url,
-    data,
+    data, //qs.stringify(data),
     params,
     method,
   });
