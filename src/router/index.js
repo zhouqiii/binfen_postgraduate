@@ -28,6 +28,12 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "paperdetail" */ "../views/quest/Select.vue"),
   },
+  {
+    path: "/input",
+    name: "input",
+    component: () =>
+      import(/* webpackChunkName: "paperdetail" */ "../views/quest/Input.vue"),
+  },
 ];
 
 const router = createRouter({

@@ -1,5 +1,5 @@
 <template>
-  <div class="home" >
+  <div class="home">
     <!--    题目-->
     <div>
       <h6>问题</h6>
