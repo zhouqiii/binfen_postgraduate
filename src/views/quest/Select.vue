@@ -1,5 +1,5 @@
 <template>
-  <div class="home" @click="testAxios">
+  <div class="home" >
     <!--    题目-->
     <div>
       <h6>问题</h6>
@@ -7,11 +7,11 @@
     </div>
     <!--   选项-->
     <div>
-      <button onclick="checkAns('A')">
+      <button @click="checkAns('A')">
         A
         <p>兴奋的产生传导和恢复过程</p></button
       ><br />
-      <button onclick="checkAns('B')">
+      <button @click="checkAns('B')">
         B
         <p>机械收缩过程</p></button
       ><br />
@@ -39,9 +39,9 @@ export default {
   methods: {
     checkAns(ans) {
       if ("A" === ans) {
-        document.body.background = "green";
+        document.body.style.background = "green";
       } else {
-        document.body.background = "red";
+        document.body.style.background = "red";
       }
     },
     testAxios() {
