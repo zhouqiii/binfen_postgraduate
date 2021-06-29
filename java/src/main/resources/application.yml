@@ -1,0 +1,55 @@
+# 全局配置
+server:
+  port: 8531
+  servlet:
+    #项目路径
+    context-path: /postgraduate
+    session:
+      #session超时时间
+      timeout: 1800000
+  http:
+    encoding: UFT-8
+    charset: UTF-8
+    enabled: true
+
+#spring环境变量
+spring:
+  # dev || prod
+  profiles:
+    active: dev
+  application:
+    name: postgraduate
+  #试图解析器
+  mvc:
+    view:
+      prefix: classpath:static/jsp/
+      suffix: .jsp
+  #文件上传大小
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 150MB
+      max-request-size: 150MB
+# mybatis
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*Mapper.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: com.gistone.policytool.*.entity
+  global-config:
+    #数据库相关配置
+    db-config:
+      #主键类型  AUTO:"数据库ID自增", INPUT:"用户输入ID", ID_WORKER:"全局唯一ID (数字类型唯一ID)", UUID:"全局唯一ID UUID";
+      id-type: AUTO
+      #字段策略 IGNORED:"忽略判断",NOT_NULL:"非 NULL 判断"),NOT_EMPTY:"非空判断"
+      field-strategy: NOT_NULL
+      #驼峰下划线转换
+      column-underline: true
+      logic-delete-value: 0
+      logic-not-delete-value: 1
+    banner: false
+logging:
+  level:
+    springfox.documentation.sprixng.web.scanners.ApiModelReader: info
+    com.baomidou.mybatisplus.core.MybatisConfiguration: info
+    org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener: info
+debug: on
