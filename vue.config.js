@@ -15,4 +15,16 @@ module.exports = {
         .end();
     });
   },
+  devServer: {
+    proxy: {
+      "/": {
+        target: "https://www.alex188.cn/AppPrj4",
+        changeOrigin: true,
+        ws: true,
+        pathRewrite: {
+          "^/": "",
+        },
+      },
+    },
+  },
 };
