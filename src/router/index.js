@@ -16,6 +16,18 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "paperdetail" */ "../views/PaperDetail.vue"),
   },
+  {
+    path: "/about",
+    name: "about",
+    component: () =>
+      import(/* webpackChunkName: "paperdetail" */ "../views/About.vue"),
+  },
+  {
+    path: "/select",
+    name: "select",
+    component: () =>
+      import(/* webpackChunkName: "paperdetail" */ "../views/quest/Select.vue"),
+  },
 ];
 
 const router = createRouter({
