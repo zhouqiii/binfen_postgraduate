@@ -52,4 +52,5 @@ logging:
     springfox.documentation.sprixng.web.scanners.ApiModelReader: info
     com.baomidou.mybatisplus.core.MybatisConfiguration: info
     org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener: info
+    com.hcen.service: debug
 debug: on
